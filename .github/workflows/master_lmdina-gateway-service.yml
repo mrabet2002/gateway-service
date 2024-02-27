@@ -48,4 +48,4 @@ jobs:
             docker pull mrabet2002/lmdina-gateway-service:latest
             docker stop lmdina-gateway-service || true
             docker rm lmdina-gateway-service || true
-            docker run -d --name lmdina-gateway-service -p 8080:8080 mrabet2002/lmdina-gateway-service:latest
+            docker run -d --name lmdina-gateway-service -p 8888:8080 mrabet2002/lmdina-gateway-service:latest
