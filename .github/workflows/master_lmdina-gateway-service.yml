@@ -40,10 +40,10 @@ jobs:
       - name: Deploy to Azure VM
         uses: appleboy/ssh-action@master
         with:
-          host: ${{ secrets.AZURE_VM_HOST }}
-          username: ${{ secrets.AZURE_VM_USERNAME }}
-          key: ${{ secrets.AZURE_VM_SSH_PRIVATE_KEY }}
-          port: ${{ secrets.AZURE_VM_SSH_PORT }}
+          host: ${{ secrets.HOST }}
+          username: ${{ secrets.USERNAME }}
+          key: ${{ secrets.SSH_PRIVATE_KEY }}
+          port: ${{ secrets.SSH_PORT }}
           script: |
             docker pull mrabet2002/lmdina-gateway-service:latest
             docker stop lmdina-gateway-service || true
